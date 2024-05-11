@@ -1,0 +1,310 @@
+---
+title: "[@gonzalez24]"
+subtitle: "для журнального клуба EBM_BASE"
+author: 
+  - name: "Г. А. Мороз\n\nМеждународная лаборатория языковой конвергенции НИУ ВШЭ"
+date: "05/11/2024"
+date-format: "D.MM.YYYY"
+format: 
+  beamer:
+    theme: Singapore
+    mainfont: Brill
+    monofont: Iosevka
+    df-print: kable
+    pdf-engine: xelatex
+    cite-method: natbib
+    classoption: t
+    header-includes: |
+       \setbeamertemplate{footline}[page number]
+urlcolor: teal
+citecolor: teal
+echo: false
+fig-align: center
+bibliography: bibliography.bib
+csl: apa.csl
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+theme_set(theme_minimal()+theme(text = element_text(size = 16), legend.position = "bottom"))
+library(kableExtra)
+```
+
+# Обо мне
+
+## Лингвист
+
+- полевой исследователь (30 экспедиций, почти все на Кавказ)
+- фонетист, фонолог, квантитативный лингвист, занимаюсь лингвистической географией
+- преподаю статистику и R
+- написал несколько лингвистических пакетов для R
+    - [`lingtypology`](https://ropensci.github.io/lingtypology/)
+    - [`phonfieldwork`](https://docs.ropensci.org/phonfieldwork/)
+    - [`lingglosses`](https://github.com/agricolamz/lingglosses) \pause
+- я не занимаюсь обучением и исследованием больших языковых моделей \pause
+- 99% лингвистов не занимается придумыванием, какого рода кофе и как нужно говорить или писать
+
+# Rationale
+
+## Научных публикаций очень много: желаемое
+
+```{r}
+#| out-height: 25%
+#| fig-align: center
+knitr::include_graphics("images/01_standing_on_the_shoulders_of_giants.png")
+```
+
+\pause
+
+- "*...Мы подобны карликам, усевшимся на плечах великанов; мы видим больше и дальше, чем они, не потому, что обладаем лучшим зрением, и не потому, что выше их, но потому, что они нас подняли и увеличили наш рост собственным величием*" высказываение приписывают Бернару Шартрскому, французскому философу XI-XII 
+
+\pause
+
+- "*Today we are privileged to sit side-by-side with the giants on whose shoulders we stand.*" Gerald Holton, "On the recent past of physics," American Journal of Physics, 29 (December, 1961), 805.
+
+## Научных публикаций очень много: реальность
+
+- Динамика сохраняется: [@price1963; @bornmann2015] 
+- Очень сложно разобраться в какой-либо области знания \pause
+- Количество цитирований (или другие библиометрические меры) могли бы помочь, но ...
+    - ... люди все чаще цитируют, не читая и эра больших языковых моделей скорее всего увеличит этот эффект \pause
+    - ... люди могут хакнуть и обессмыслить любую метрику \pause
+- Исследователи больше любят новые исследования: на материале 726 медицинских статей, содержащих 17 895 научных ссылок, авторы приходят к выводу, что вне зависимости от журнала более 70% цитируемых работ опубликованы не более 10 лет до публикации работы. [@chow23]
+
+# Ландашфты
+
+## [Карта репозиториев гитхаба](https://anvaka.github.io/map-of-github/) (Андрей Кашча)
+
+```{r}
+#| fig-align: "center"
+#| out-width: 75%
+knitr::include_graphics("images/04_github_1.png")
+```
+
+<https://anvaka.github.io/map-of-github/>
+
+## [Карта репозиториев гитхаба](https://anvaka.github.io/map-of-github/) (Андрей Кашча)
+
+```{r}
+#| fig-align: "center"
+#| out-width: 78%
+
+knitr::include_graphics("images/05_github_2.png")
+```
+
+##  [@gonzalez24]
+
+*The number of publications in biomedicine and life sciences has rapidly grown over the last decades, with over 1.5 million papers now published every year. This makes it difficult to keep track of new scientific works and to have an overview of the evolution of the field as a whole. Here we present a 2D atlas of the entire corpus of biomedical literature, and argue that it provides a unique and useful overview of the life sciences research. <...>*
+
+<https://static.nomic.ai/pubmed.html> (интерактивная версия)
+
+## Проекты Nomic
+
+- [map of Wikipedia](https://atlas.nomic.ai/map/wikipedia)
+- [map of Twitter](https://atlas.nomic.ai/map/twitter)
+- другие https://atlas.nomic.ai/discover
+
+# Похожее
+
+## Библиометрические исследования?
+
+Библиометрия --- дисциплина, возникшая в конце XIX века, в рамках которой можно встретить разные применения математических методов к исследованию научных работ. Наиболее известные применения:
+
+- графы соавторства
+- библиографические ссылки 
+- ключевые слова
+- измерение качества журналов
+- и др.
+
+## [@noichl21]
+
+```{r}
+#| out-width: 79%
+#| fig-align: center
+knitr::include_graphics("images/18_noichl.png")
+```
+
+## [@noichl21]
+
+Работа очень похожа целями и результатом на работу [@gonzalez24], но основано на списках литературы: если авторы ссылаются на сходных авторов, значит они, вероятно, будут близки в полученном пространстве.
+
+# Обсуждение [@gonzalez24]
+
+## Журнал
+
+Статья опубликована в журнале Patterns:
+
+> *Patterns* is a premium open access journal from Cell Press, publishing ground-breaking original research across the full breadth of data science. We’re all about sharing data science solutions to problems that cross domain boundaries. 
+
+> *Patterns* reaches a broad, global audience of computer scientists, researchers in data intensive domains, data stewards, and policy makers. We adhere to the FAIR Principles to make sure that the data, software, workflows, algorithms, and other research outputs we publish are findable, accessible, interoperable, and reusable.
+
+> *Patterns* is the home for data scientists and researchers in data-intensive fields in both academia and industry. The journal shares data science solutions across the spectrum of disciplines, including computational, physical, life, and social sciences, and the humanities.
+
+## Авторы статьи
+
+- Rita González-Márquez^1,2^ 
+- Luca Schmidt^1,2^ 
+- Benjamin M. Schmidt^3^ 
+- Philipp Berens^1,2^
+- Dmitry Kobak^1,5^
+
+1) Hertie Institute for AI in Brain Health, University of Tübingen, Germany
+2) Tübingen AI Center, Tübingen, Germany
+3) Nomic AI, New York, New York, USA
+4) IWR, Heidelberg University, Heidelberg , Germany
+5) Lead contact
+
+
+## Авторы статьи
+
+- Rita González-Márquez^1,2^ 
+- Luca Schmidt^1,2^ 
+- Benjamin M. Schmidt^3^ 
+- Philipp Berens^1,2^
+- Dmitry Kobak^1,5^
+
+1) Hertie Institute for AI in Brain Health, University of Tübingen, Germany
+2) Tübingen AI Center, Tübingen, Germany
+3) \alert{Nomic AI}, New York, New York, USA
+4) IWR, Heidelberg University, Heidelberg , Germany
+5) Lead contact
+
+## Авторы статьи
+
+- Rita González-Márquez^1,2^ 
+- Luca Schmidt^1,2^ 
+- Benjamin M. Schmidt^3^ 
+- Philipp Berens^1,2^
+- Dmitry Kobak^1,5^
+
+```{r}
+tribble(
+  ~` `,                            ~`R.G.-M.`, ~`L. S.`, ~`B. M. S.`, ~`P. B.`, ~`D. K.`,
+  "Design the study",                       "+",        " ",      " ",         " ",      "+",
+  "Analysis and Figures",                   "+",        " ",      " ",         " ",      " ",
+  "Pilot experiments with LMs",             " ",        "+",      " ",         " ",      " ",   
+  "Interactive website",                    " ",        " ",      "+",         " ",      " ",
+  "Initial draft",                          "+",        " ",      " ",         " ",      " ",
+  "Edited the paper",                       "+",        " ",      " ",         "+",      "+",
+  "Discussed the results",                  "+",        " ",      " ",         "+",      "+",
+  "Study supervision",                      " ",        " ",      " ",         "+",      "+"
+  )
+```
+
+## Что было сделано
+
+```{r}
+#| fig-align: "center"
+#| out-width: 63%
+
+knitr::include_graphics("images/06_landscape.png")
+```
+
+2D пространство на основе 21 миллиона аннотаций (snapshot 2021 года), которые были траснформированы в 768-мерное векторное пространство при помощи PubMedBERT [@gu21], а дальше сплюснуты в 2D при помощи *t*-SNE [@maaten08]. Цвета основаны на названиях журналов.
+
+## Эмбеддинги
+
+- Архитектурам машинного обучения любой сложности при работе с языковыми данными нужно уметь преобразовывать слова (на самом деле некоторые кусочки письменных слов) в наборы чисел, которые обычно называют **вектором**.
+- Числа для вектора каждого конкретного слова обычно получают на основе контекстов, в которых оно появляется в обучающем корпусе.
+- Слова с похожим значением будут направлены в одну сторону. Сравнивать их следует по углу между векторами.
+- В работах [@mikolov13a; @mikolov13b] от Google была представлена модель `word2vec`, архитектура нейросети для создания векторных моделей.
+- Совсем недавно вышли видео 3Blue1Brown, в которых это обсуждается подробнее:
+    - [But what is a GPT? Visual intro to transformers](https://www.youtube.com/watch?v=wjZofJX0v4M)
+    - [Attention in transformers, visually explained](https://www.youtube.com/watch?v=eMlx5fFNoYc)
+
+## Эмбеддинги
+
+```{r}
+#| out-width: 108%
+knitr::include_graphics("images/11_emb_1.png")
+```
+
+Взято из видео 3Blue1Brown.
+
+## doc2vec
+
+- Чтобы анализировать тексты [@le14] предложили разбивать их на абзацы и конкатенировать векторы, которые входят в абзац, а потом использовать их для кластеризации текстов.
+- Если применять эту логику к предложениям, то это позволяет не терять информацию о месте слова.
+
+## Уменьшение размерности
+
+- Эмбеддинги --- многомерные вектора чисел, например, в GPT-3 50 тысяч токенов закодировано при помощи векторов длинной 12 тысяч. Смотреть на это пространство глазами нельзя, но можно попробовать уменьшить размерность.
+
+```{r}
+#| layout-ncol: 2
+#| out-width: 96%
+
+knitr::include_graphics("images/13_cube_2.jpg")
+knitr::include_graphics("images/12_cube_1.jpeg")
+```
+
+## Уменьшение размерности
+
+- Эмбеддинги --- многомерные вектора чисел, например, в GPT-3 50 тысяч токенов закодировано при помощи векторов длинной 12 тысяч. Смотреть на это пространство глазами нельзя, но можно попробовать уменьшить размерность.
+
+- Популярные алгоритмы:
+    - Principal Component Analysis (PCA)
+    - Multidimensional Scaling (MDS)
+    - Linear discriminant analysis (LDA)
+    - Uniform Manifold Approximation and Projection (UMAP)
+    - t-distributed Stochastic Neighbor Embedding (t-SNE)
+
+Важно еще обратить внимание [на видео](https://www.youtube.com/watch?v=yKHtbWHP4Fg
+) Дмитрия Кобака, посвященное уменьшению размерностей (начиная с 56 минуты обсуждается сегодняшняя статья).
+
+## Кластеризация
+
+- Полученные группы в пространстве часто можно выделить автоматически. Для этого используют методы кластеризации, чаще всего Hierarchical Density-based spatial clustering of applications with noise (HDBSCAN) [@ester1996; @campello13] \pause
+- При этом авторы использовали кластеризацию несколько по-другому:
+    - они сначала автоматически аннотировали аннотации на основе названия журнала (точнее 34.4% аннотаций)
+    - а дальше при помощи алгоритма *k*-NN смотрят насколько раздилимы они в многомерном пространстве. 
+
+## \alert{??} Авторы написали, что взяли весь PubMed
+
+```{r}
+#| fig-align: "center"
+#| out-width: 100%
+
+knitr::include_graphics("images/19_car-t.png")
+```
+
+\pause
+
+```{r}
+#| fig-align: "center"
+#| out-width: 70%
+
+knitr::include_graphics("images/20_car-t.png")
+```
+
+## \alert{??} Frontiers in Immunology (April, May 2024)
+    
+- Identification and Validation of Biomarkers in Membranous Nephropathy and Pan-\alert{Cancer} Analysis 
+- Material basis and molecular mechanisms of Chaihuang Qingyi Huoxue Granule in the treatment of acute pancreatitis based on network \alert{pharmacology} and molecular docking-based strategy
+- MiR-146a alleviates inflammatory bowel disease in mice through systematic regulation of multiple \alert{genetic} networks
+- Screening mitochondria-related biomarkers in skin and plasma of atopic \alert{dermatitis} patients by bioinformatics analysis and machine learning
+- Independent organelle and organelle—organelle interactions: essential mechanisms for malignant \alert{gynecological} cancer cell survival
+- Single-cell transcriptome reveals highly complement activated microglia cells in association with \alert{pediatric} tuberculous meningitis
+- \dots
+
+## \alert{??} Метрика качества
+
+Авторы в качестве метрики качества используют точность (accuracy) *k*-NN кластеризации 34.4% аннотаций.
+
+Однако разумным, как мне кажется, должна быть локальная и глобальная структура, которую бы оценивали биологи и медики, т. е. насколько осмысленным является соседство тех или иных областей. Однако сложно представить
+
+## Case study: COVID
+
+```{r}
+#| layout-ncol: 2
+#| out-width: 96%
+
+knitr::include_graphics("images/13_cube_2.jpg")
+knitr::include_graphics("images/12_cube_1.jpeg")
+```
+
+
+# Список литературы
