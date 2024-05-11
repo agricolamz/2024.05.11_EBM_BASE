@@ -321,6 +321,13 @@ knitr::include_graphics("images/10_education_surgery.png")
 
 ## Case study: недобросовестные работы
 
+```{r}
+#| out-width: 100%
+
+knitr::include_graphics("images/23_retracted.png")
+```
+
+
 # Мои вопросы
 
 ## \alert{??} Авторы написали, что взяли весь PubMed
@@ -367,17 +374,16 @@ knitr::include_graphics("images/20_car-t.png")
 #| fig-align: "center"
 #| out-width: 100%
 
-knitr::include_graphics("images/20_car-t.png")
+knitr::include_graphics("images/24_linguistics.png")
 ```
 
 ## Другие науки
 
 ```{r}
 #| fig-align: "center"
-#| out-width: 100%
+#| out-width: 112%
 
-knitr::include_graphics("images/20_car-t.png")
+knitr::include_graphics("images/25_other_sciences.jpg")
 ```
-
 
 # Список литературы
