@@ -262,6 +262,67 @@ knitr::include_graphics("images/12_cube_1.jpeg")
     - они сначала автоматически аннотировали аннотации на основе названия журнала (точнее 34.4% аннотаций)
     - а дальше при помощи алгоритма *k*-NN смотрят насколько раздилимы они в многомерном пространстве. 
 
+## Case study: COVID
+
+```{r}
+#| layout-ncol: 2
+#| out-width: 98%
+
+knitr::include_graphics("images/07_landscape_by_year.png")
+knitr::include_graphics("images/08_covid.png")
+```
+
+В кластерах поменьше, также можно найти свои подобласти.
+
+## Case study: нейронауки
+
+```{r}
+#| out-width: 97%
+
+knitr::include_graphics("images/21_neuroscience.png")
+```
+
+Молекулярные и клеточные vs. поведенческие и когнитивные
+
+## Case study: машинное обучение
+
+```{r}
+#| out-width: 97%
+
+knitr::include_graphics("images/22_ml.png")
+```
+
+радиология > психитрия, неврология > онкология > дерматология, гинекология
+
+В медицине больше классических линейных моделей (регрессия, факторный анализ), а в не-медицине больше нелинейных и непараметрических моделей.
+
+```{md}
+#| echo: false
+- PCA --- principal component analysis;
+- RF --- random forest; 
+- DL --- deep learning; 
+- CNN --- convolutional neural network; 
+- SVM --- support vector machine; 
+- DR --- dimensionality reduction;
+- NN --- neural networks; Some of the highlighted NN papers may refer to biological neural networks.
+- LR --- linear regression; 
+- FA --- factor analysis.
+```
+
+## Case study: гендерное распределение
+
+```{r}
+#| layout-ncol: 2
+#| out-width: 100%
+
+knitr::include_graphics("images/09_landscape_by_gender.png")
+knitr::include_graphics("images/10_education_surgery.png")
+```
+
+## Case study: недобросовестные работы
+
+# Мои вопросы
+
 ## \alert{??} Авторы написали, что взяли весь PubMed
 
 ```{r}
@@ -292,18 +353,30 @@ knitr::include_graphics("images/20_car-t.png")
 
 ## \alert{??} Метрика качества
 
-Авторы в качестве метрики качества используют точность (accuracy) *k*-NN кластеризации 34.4% аннотаций.
+Авторы как метрику качества используют точность (accuracy) *k*-NN кластеризации меток 34.4% аннотаций, основанных на названиях журналов.
 
-Однако разумным, как мне кажется, должна быть локальная и глобальная структура, которую бы оценивали биологи и медики, т. е. насколько осмысленным является соседство тех или иных областей. Однако сложно представить
+Разумной, как мне кажется, должна быть мера, построенная на экспертной оценке локальной и глобальной структуры сделанной биологами и медиками. Что-то сетевое, где асессоры оценивают соседство областей, а агрегирующей мерой является мера согласия (каппа Фляйса).
 
-## Case study: COVID
+Случай с нейронауками показывает, что авторы, возможно, при желании смогут объяснить любой сплит.
+
+# Конфликт интересов
+
+## Ландшафт лингвистики
 
 ```{r}
-#| layout-ncol: 2
-#| out-width: 96%
+#| fig-align: "center"
+#| out-width: 100%
 
-knitr::include_graphics("images/13_cube_2.jpg")
-knitr::include_graphics("images/12_cube_1.jpeg")
+knitr::include_graphics("images/20_car-t.png")
+```
+
+## Другие науки
+
+```{r}
+#| fig-align: "center"
+#| out-width: 100%
+
+knitr::include_graphics("images/20_car-t.png")
 ```
 
 
